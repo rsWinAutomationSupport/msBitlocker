@@ -70,7 +70,7 @@ function Get-TargetResource
 	)
 
     #Load helper module
-    Import-Module "$((Get-Item -LiteralPath "$($PSScriptRoot)").Parent.Parent.FullName)\Misc\xBitlockerCommon.psm1" -Verbose:0
+    Import-Module "$((Get-Item -LiteralPath "$($PSScriptRoot)").Parent.Parent.FullName)\Misc\msBitlockerCommon.psm1" -Verbose:0
 
     CheckForPreReqs
 
@@ -161,7 +161,7 @@ function Set-TargetResource
 	)
 
     #Load helper module
-    Import-Module "$((Get-Item -LiteralPath "$($PSScriptRoot)").Parent.Parent.FullName)\Misc\xBitlockerCommon.psm1" -Verbose:0
+    Import-Module "$((Get-Item -LiteralPath "$($PSScriptRoot)").Parent.Parent.FullName)\Misc\msBitlockerCommon.psm1" -Verbose:0
       
     CheckForPreReqs
 
@@ -240,7 +240,7 @@ function Test-TargetResource
 	)
 
     #Load helper module
-    Import-Module "$((Get-Item -LiteralPath "$($PSScriptRoot)").Parent.Parent.FullName)\Misc\xBitlockerCommon.psm1" -Verbose:0
+    Import-Module "$((Get-Item -LiteralPath "$($PSScriptRoot)").Parent.Parent.FullName)\Misc\msBitlockerCommon.psm1" -Verbose:0
 
     CheckForPreReqs
 
