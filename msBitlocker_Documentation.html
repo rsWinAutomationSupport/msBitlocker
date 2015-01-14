@@ -2,14 +2,14 @@
 <div id="longDesc">
 <span style="font-family:Calibri; font-size:medium">
 <h1 style="font-family:Calibri Light; color:#2e74b5; font-size:large">Introduction</h1>
-<p>The<strong> xBitlocker</strong> module is a part of the Windows PowerShell Desired State Configuration (DSC) Resource Kit, which is 
-a collection of DSC Resources produced by the PowerShell Team. This module contains the <strong>xBLAutoBitlocker, xBLBitlocker, xBLTpm</strong> resources. This DSC 
+<p>The<strong> msBitlocker</strong> module is a part of the Windows PowerShell Desired State Configuration (DSC) Resource Kit, which is 
+a collection of DSC Resources produced by the PowerShell Team. This module contains the <strong>msBLAutoBitlocker, msBLBitlocker, msBLTpm</strong> resources. This DSC 
 Module allows you to configure Bitlocker on a single disk, configure a TPM chip, or automatically enable Bitlocker on multiple disks.</p>
 <p><strong>All of the resources in the DSC Resource Kit are provided AS IS, and are not supported through any Microsoft standard support program 
-or service. The ""x" in xBitlocker stands for experimental</strong>, which means that these resources will be <strong>fix forward</strong> 
+or service. The ""x" in msBitlocker stands for experimental</strong>, which means that these resources will be <strong>fix forward</strong> 
 and monitored by the module owner(s).</p>
 <p>Please leave comments, feature requests, and bug reports in the Q &amp; A tab for this module.</p>
-<p>If you would like to modify <strong>xBitlocker</strong> module, feel free. When modifying, please update the module name, resource friendly name, 
+<p>If you would like to modify <strong>msBitlocker</strong> module, feel free. When modifying, please update the module name, resource friendly name, 
 and MOF class name (instructions below). As specified in the license, you may copy or modify this resource as long as they are used on the Windows Platform.</p>
 <p>For more information about Windows PowerShell Desired State Configuration, check out the blog posts on the
 <a href="http://blogs.msdn.com/b/powershell/"><span style="color:#0000ff">PowerShell Blog</span></a> (</span><a href="http://blogs.msdn.com/b/powershell/archive/2013/11/01/configuration-in-a-devops-world-windows-powershell-desired-state-configuration.aspx"><span style="color:#0000ff">this</span></a> is a good starting point). There are 
@@ -18,13 +18,13 @@ also great community resources, such as <a href="http://powershell.org/wp/tag/ds
 <a href="http://go.microsoft.com/fwlink/?LinkID=389546"><span style="color:#0000ff">this blog post</span></a>.<br></p>
 
 <h1 style="color:#2e74b5; font-family:Calibri Light; font-size:large">Installation</h1>
-<p>To install <strong >xBitlocker</strong> module </p>
+<p>To install <strong >msBitlocker</strong> module </p>
 <ul style="list-style-type:disc; direction:ltr">
 <li>Unzip the content under $env:ProgramFiles\WindowsPowerShell\Modules folder</li>
 </ul>
 <p>To confirm installation:<br></p>
 <ul style="list-style-type:disc; direction:ltr">
-<li>Run <strong>Get-DSCResource</strong> to see that <strong>xBLAutoBitlocker, xBLBitlocker, xBLTpm</strong> are among the DSC Resources listed<br></li>
+<li>Run <strong>Get-DSCResource</strong> to see that <strong>msBLAutoBitlocker, msBLBitlocker, msBLTpm</strong> are among the DSC Resources listed<br></li>
 </ul>
 
 <h1 style="color:#2e74b5; font-family:Calibri Light; font-size:large">Requirements</h1>
@@ -33,11 +33,11 @@ also great community resources, such as <a href="http://powershell.org/wp/tag/ds
 that are present on both the download page and the release notes for WMF 4.0.</p>
 
 <h1 style="color:#2e74b5; font-family:Calibri Light; font-size:large">Description</h1>
-<p>The <strong >xBitlocker </strong> module contains the <strong >xBLAutoBitlocker, xBLBitlocker, xBLTpm</strong> DSC Resources. This DSC 
+<p>The <strong >msBitlocker </strong> module contains the <strong >msBLAutoBitlocker, msBLBitlocker, msBLTpm</strong> DSC Resources. This DSC 
 Module allows you to configure Bitlocker on a single disk, configure a TPM chip, or automatically enable Bitlocker on multiple disks.</p>
 
 <h1 style="color:#2e74b5; font-family:Calibri Light; font-size:large">Details</h1>
-<p><strong>xBLAutoBitlocker</strong> is used to automatically enable Bitlocker on drives of type Fixed or Removable. It does not work on Operating System drives. <strong>xBLAutoBitlocker</strong> has the following properties. Where no description is listed, properties correspond directly to <a href="http://technet.microsoft.com/en-us/library/jj649837.aspx">Enable-Bitlocker</a> parameters.</p>
+<p><strong>msBLAutoBitlocker</strong> is used to automatically enable Bitlocker on drives of type Fixed or Removable. It does not work on Operating System drives. <strong>msBLAutoBitlocker</strong> has the following properties. Where no description is listed, properties correspond directly to <a href="http://technet.microsoft.com/en-us/library/jj649837.aspx">Enable-Bitlocker</a> parameters.</p>
 <ul style="list-style-type:disc; direction:ltr">
 <li>
 	<span style="width: 250px; float: left; font-weight: bold;">*DriveType:</span>The type of volume, as reported by Get-Volume, to auto apply Bitlocker to
@@ -101,7 +101,7 @@ Module allows you to configure Bitlocker on a single disk, configure a TPM chip,
 </li>
 </ul>
 
-<p><strong>xBLBitlocker</strong> has the following properties. Where no description is listed, properties correspond directly to <a href="http://technet.microsoft.com/en-us/library/jj649837.aspx">Enable-Bitlocker</a> parameters.</p>
+<p><strong>msBLBitlocker</strong> has the following properties. Where no description is listed, properties correspond directly to <a href="http://technet.microsoft.com/en-us/library/jj649837.aspx">Enable-Bitlocker</a> parameters.</p>
 <ul style="list-style-type:disc; direction:ltr">
 <li>
 	<span style="width: 250px; float: left; font-weight: bold;">*MountPoint:</span>The MountPoint name as reported in Get-BitLockerVolume
@@ -165,7 +165,7 @@ Module allows you to configure Bitlocker on a single disk, configure a TPM chip,
 </li>
 </ul>
 
-<p><strong>xBLTpm</strong> is used to initialize a TPM chip using <a href="http://technet.microsoft.com/en-us/library/jj603112.aspx">Initialize-TPM</a>. <strong>xBLTpm</strong> has the following properties.</p>
+<p><strong>msBLTpm</strong> is used to initialize a TPM chip using <a href="http://technet.microsoft.com/en-us/library/jj603112.aspx">Initialize-TPM</a>. <strong>msBLTpm</strong> has the following properties.</p>
 <ul style="list-style-type:disc; direction:ltr">
 <li>
 	<span style="width: 250px; float: left; font-weight: bold;">*Identity:</span>Not actually used, so could be anything
@@ -190,7 +190,7 @@ Module allows you to configure Bitlocker on a single disk, configure a TPM chip,
     Update the following names by replacing MSFT with your company/community name and replacing the <strong>"x"</strong> with <strong>"c"</strong> (short for "Community") or another prefix of your choice:
 <ul>
 <li>
-    <strong>Module name (ex: xBitlocker</strong> becomes <strong>cBitlocker</strong>)
+    <strong>Module name (ex: msBitlocker</strong> becomes <strong>cBitlocker</strong>)
 </li>
 <li>
     <strong>Resource folder (ex: MSFT_msBLBitlocker</strong> becomes <strong>Contoso_cBLBitlocker</strong>)
@@ -199,7 +199,7 @@ Module allows you to configure Bitlocker on a single disk, configure a TPM chip,
     <strong>Resource Name (ex: MSFT_msBLBitlocker</strong> becomes <strong>Contoso_cBLBitlocker</strong>)
 </li>
 <li>
-    <strong>Resource Friendly Name (ex: xBLBitlocker</strong> becomes <strong>cBLBitlocker</strong>)
+    <strong>Resource Friendly Name (ex: msBLBitlocker</strong> becomes <strong>cBLBitlocker</strong>)
 </li>
 <li>
     <strong>MOF class name (ex: MSFT_msBLBitlocker</strong> becomes <strong>Contoso_cBLBitlocker</strong>)
@@ -226,23 +226,23 @@ Module allows you to configure Bitlocker on a single disk, configure a TPM chip,
     Initial release with the following resources
 <ul style="list-style-type:circle">
 <li>
-    xBLAutoBitlocker
+    msBLAutoBitlocker
 </li>
 <li>
-    xBLBitlocker
+    msBLBitlocker
 </li>
 <li>
-    xBLTpm
+    msBLTpm
 </li>
 </ul>
 </li>
 </ul>
 
 <h1 style="margin-bottom:0pt; font-family:Calibri Light; color:#2e74b5; font-size:large">Example: ConfigureBitlockerOnOSDrive</h1>
-This example enables Bitlocker on an Operating System drive. The example code for ConfigureBitlockerOnOSDrive is located in "ConfigureBitlockerOnOSDrive.ps1" in the module folder under ...\xExchange\Examples\ConfigureBitlockerOnOSDrive. <p></p>
+This example enables Bitlocker on an Operating System drive. The example code for ConfigureBitlockerOnOSDrive is located in "ConfigureBitlockerOnOSDrive.ps1" in the module folder under ...\msExchange\Examples\ConfigureBitlockerOnOSDrive. <p></p>
 
 <h1 style="margin-bottom:0pt; font-family:Calibri Light; color:#2e74b5; font-size:large">Example: ConfigureBitlockerAndAutoBitlocker</h1>
-Enables Bitlocker on an Operating System drive, and automatically enables Bitlocker on all drives of type 'Fixed'. The example code for ConfigureBitlockerAndAutoBitlocker is located in "ConfigureBitlockerAndAutoBitlocker.ps1" in the module folder under ...\xExchange\Examples\ConfigureBitlockerAndAutoBitlocker. <p></p></br>
+Enables Bitlocker on an Operating System drive, and automatically enables Bitlocker on all drives of type 'Fixed'. The example code for ConfigureBitlockerAndAutoBitlocker is located in "ConfigureBitlockerAndAutoBitlocker.ps1" in the module folder under ...\msExchange\Examples\ConfigureBitlockerAndAutoBitlocker. <p></p></br>
 
 </span>
 </div>

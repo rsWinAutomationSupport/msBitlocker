@@ -373,26 +373,26 @@ function CheckForPreReqs
     {
         $hasAllPreReqs = $false
 
-        Write-Error "The Bitlocker feature needs to be installed before the xBitlocker module can be used"
+        Write-Error "The Bitlocker feature needs to be installed before the msBitlocker module can be used"
     }
 
     if ($blAdminToolsFeature.InstallState -ne "Installed")
     {
         $hasAllPreReqs = $false
 
-        Write-Error "The RSAT-Feature-Tools-BitLocker feature needs to be installed before the xBitlocker module can be used"
+        Write-Error "The RSAT-Feature-Tools-BitLocker feature needs to be installed before the msBitlocker module can be used"
     }
 
     if ($blAdminToolsRemoteFeature.InstallState -ne "Installed")
     {
         $hasAllPreReqs = $false
 
-        Write-Error "The RSAT-Feature-Tools-BitLocker-RemoteAdminTool feature needs to be installed before the xBitlocker module can be used"
+        Write-Error "The RSAT-Feature-Tools-BitLocker-RemoteAdminTool feature needs to be installed before the msBitlocker module can be used"
     }
 
     if ($hasAllPreReqs -eq $false)
     {
-        throw "Required Bitlocker features need to be installed before xBitlocker can be used"
+        throw "Required Bitlocker features need to be installed before msBitlocker can be used"
     }
 }
 

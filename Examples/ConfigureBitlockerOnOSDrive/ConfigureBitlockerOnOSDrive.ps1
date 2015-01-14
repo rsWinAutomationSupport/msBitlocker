@@ -1,6 +1,6 @@
 Configuration ConfigureBitlockerOnOSDrive
 {
-    Import-DscResource -Module xBitlocker
+    Import-DscResource -Module msBitlocker
 
     Node "E15-1"
     {
@@ -20,7 +20,7 @@ Configuration ConfigureBitlockerOnOSDrive
         }
 
 		#This example enables Bitlocker on the Operating System drive using both a RecoveryPasswordProtector and a StartupKeyProtector
-        xBLBitlocker Bitlocker
+        msBLBitlocker Bitlocker
         {
             MountPoint                = 'C:'
             PrimaryProtector          = 'RecoveryPasswordProtector'

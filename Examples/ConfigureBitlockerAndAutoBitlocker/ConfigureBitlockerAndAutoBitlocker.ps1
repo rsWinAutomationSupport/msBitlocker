@@ -1,6 +1,6 @@
 Configuration ConfigureBitlockerAndAutoBitlocker
 {
-    Import-DscResource -Module xBitlocker
+    Import-DscResource -Module msBitlocker
 
     Node 'E15-1'
     {
@@ -20,7 +20,7 @@ Configuration ConfigureBitlockerAndAutoBitlocker
         }
 
 		#This example enables Bitlocker on the Operating System drive using both a RecoveryPasswordProtector and a StartupKeyProtector
-        xBLBitlocker Bitlocker
+        msBLBitlocker Bitlocker
         {
             MountPoint                = 'C:'
             PrimaryProtector          = 'RecoveryPasswordProtector'
@@ -34,14 +34,14 @@ Configuration ConfigureBitlockerAndAutoBitlocker
         }
 
         #This example sets up AutoBitlocker for any drive of type Fixed with a RecoveryPasswordProtector only.
-        xBLAutoBitlocker AutoBitlocker
+        msBLAutoBitlocker AutoBitlocker
         {
             DriveType                 = 'Fixed'
             PrimaryProtector          = 'RecoveryPasswordProtector'
             RecoveryPasswordProtector = $true
             UsedSpaceOnly             = $true
 
-            DependsOn                 = '[xBLBitlocker]Bitlocker' #Don't enable AutoBL until the OS drive has been encrypted
+            DependsOn                 = '[msBLBitlocker]Bitlocker' #Don't enable AutoBL until the OS drive has been encrypted
         }
     }
 }
